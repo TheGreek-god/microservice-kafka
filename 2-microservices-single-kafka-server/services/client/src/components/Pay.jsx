@@ -11,7 +11,8 @@ const Pay = ({ cart }) => {
   const { isPending, isError, mutate, data } = useMutation({
     mutationFn: async (cart) => {
       const startTime = Date.now();
-      const response = await axios.post("http://localhost:8000/payment-service", {
+      // const response = await axios.post("http://localhost:8000/payment-service", {
+      const response = await axios.post("http://localhost:3002/payment-service", {
         cart,
       });
       const endTime = Date.now();
