@@ -1,0 +1,55 @@
+# FROM node:18-alpine
+
+# WORKDIR /app
+
+# # Copy package files
+# COPY package*.json ./
+# COPY package-lock.json ./
+
+# # Install dependencies
+# RUN npm ci --only=production
+
+# # Copy source code
+# COPY . .
+
+# # Build the application
+# RUN npm run build
+
+# # Expose port
+# EXPOSE 3000
+
+# # Start the application
+# CMD ["npm", "start"]
+
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Install required dependencies
+RUN apk add --no-cache libc6-compat
+
+# Copy package files
+COPY package*.json ./
+COPY package-lock.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Set environment variables
+ENV NEXT_TELEMETRY_DISABLED 1
+
+# Disable ESLint during build
+ENV ESLINT_NO_DEV_ERRORS true
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+
+# Build with no linting
+RUN npm run build -- --no-lint
+
+# Expose port
+EXPOSE 3000
+
+# Start the application
+CMD ["npm", "start"]

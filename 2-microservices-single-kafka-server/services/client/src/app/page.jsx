@@ -10,7 +10,7 @@ const Page = () => {
       price: 129.9,
       image: "/product1.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "Elevate your comfort and style with the Nike Air Max. Featuring a sleek design and innovative cushioning technology, these shoes provide ultimate support with every step. Whether you're hitting the gym or hitting the streets, the Air Max ensures you stay on top of your game in both performance and fashion",
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const Page = () => {
       price: 29.9,
       image: "/product2.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "Complete your look with the Adidas Superstar Cap. This stylish black cap features the iconic Adidas Superstar logo, offering a blend of casual comfort and sporty style. Made with high-quality materials, it’s perfect for everyday wear or making a statement on the go",
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ const Page = () => {
       price: 49.9,
       image: "/product3.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "Stand out in style with the Puma Yellow T-Shirt. Featuring a bold graphic design, this vibrant yellow tee blends comfort with fashion. Whether you're hitting the streets or hanging with friends, this shirt makes a statement. Crafted from soft, breathable fabric, it's the perfect addition to any casual wardrobe.",
     },
   ];
   return (
